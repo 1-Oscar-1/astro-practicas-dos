@@ -8,4 +8,7 @@ export default defineConfig({
   integrations: [tailwind(), react()],
   site: 'https://1-Oscar-1.github.io',
   base: '/astro-practicas-dos',
+  build: {
+    assets: 'assets'
+  }
 });
