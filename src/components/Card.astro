@@ -1,0 +1,12 @@
+---
+// Con interface podemos indicar que parametros vamos a recibir y su tipo de dato
+interface Props {
+    title: string
+    content?: string // El "?" indica que no es obligatorio y podemos darle un valor por defecto
+}
+const {title, content = "Esta es una tarjeta de ejemplo"} = Astro.props
+---
+<div class="bg-slate-700 my-4 p-4">
+    <p>{title}</p>
+    <p>{content}</p>
+</div>

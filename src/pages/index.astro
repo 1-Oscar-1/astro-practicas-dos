@@ -1,0 +1,29 @@
+---
+// Se importa el MainLayout desde ayouts
+import MainLayout from '../layouts/MainLayout.astro'
+
+// Se importa el footer
+import Footer from '../components/Footer.astro'
+
+// Se importa el componente jsx
+import HelloWorld from '../components/HelloWorld.jsx'
+
+// Importamos la tarjeta
+import Card from '../components/Card.astro'
+---
+
+<MainLayout>
+	<!-- Todo lo que este dentro se colocara en la etiqueta slot -->
+	<div class="container m-auto">
+		<a href="./personajes"> &gt; Ver API de Rick and Morty</a>
+		<img src="https://www.dropbox.com/s/21bqqygbb1a7fgu/ovni.jpeg?raw=1" alt="Imagen de ovni">
+
+		<HelloWorld client:load/> <!-- Se debe poner el client:load para que no sea estatico -->
+
+		<Card title="Tarjeta 1" content="El contenido de esta tajeta si se paso como valor"/>
+		<Card title="Tarjeta 2"/>
+		<Card title="Tarjeta 3"/>
+		<Card title="Tarjeta 4"/>
+	</div>
+	<Footer title="Footer como parametro"/>
+</MainLayout>
